@@ -5,6 +5,8 @@ public class Main {
             System.out.println("установите прилодение для iOS");
             if(clientOS==1)
                 System.out.println("установите приложение для Android");
+            else
+                System.out.println("не поддерживается операционная система");
             int clientDeviceYear=2017;
             if(clientDeviceYear>2015)
                 System.out.println("Установите полную версию приложения");
