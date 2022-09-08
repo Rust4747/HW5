@@ -3,33 +3,27 @@ public class Main {
         int clientOS=1;
         if(clientOS==0)
             System.out.println("установите прилодение для iOS");
-            if(clientOS==1)
+            else
                 System.out.println("установите приложение для Android");
             int clientDeviceYear=2017;
             if(clientDeviceYear>2015)
                 System.out.println("Установите полную версию приложения");
-            if(clientDeviceYear<2015)
-                System.out.println("установите облегченную версию приложения");
             else
-            System.out.println("операционная система не поддерживается");
+                System.out.println("установите облегченную версию приложения");
+
         {
             int deliveryDistance=95;
-            if(deliveryDistance<20)
-                System.out.println("доставка займет 1 день");
-            if(deliveryDistance>20 && deliveryDistance<60)
-                System.out.println("доставка займет 2 дня");
-            if(deliveryDistance>60 && deliveryDistance<100)
-                System.out.println("доставка займет 3 дня");
-            else
-            System.out.println("дальше 100 км не доставляем");
+            int deliveryDay=1;
+            if(deliveryDistance>20)
+                deliveryDay++;
+            if(deliveryDistance>60)
+                deliveryDay++;
+                   System.out.println("потребуется дней "+deliveryDay);
 
             {
                 int year=2022;
-                int highGradeYear4=year%4;
-                int highGradeYear100=year%100;
-                int highGradeYear400=year%400;
-                if (highGradeYear100!=0 || highGradeYear4==0 || highGradeYear400==0)
-                    System.out.println("год высокосный");
+                if (year%4==0 && year%100!=0 && year%400==0)
+                    System.out.println("год высокосный "+year);
                 else
                     System.out.println("год не высокосный");
 
